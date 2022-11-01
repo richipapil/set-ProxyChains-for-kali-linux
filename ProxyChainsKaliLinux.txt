@@ -1,0 +1,42 @@
+How to set proxychains inkali linux.
+
+1. log in as a root user
+2. lets check if tor is installed/better install it again
+
+   apt-get install tor
+
+3. Then check for tor status if its started or not
+
+   service tor status
+
+4. start the tor service
+
+    service tor start
+
+5. then open the proxychains config file with nano
+
+    nano /etc/proxychains.conf
+
+6. uncheck or remove the pound symbol from Dynamic and insert the pound symbol in front of static and random .
+also remove the pound symbol from "dns"
+
+finally check or add the pound symbol from socks4
+and enter 
+
+socks5 (plus the ip address as same as socks4 and port number)
+
+press control + o to save it and then press enter and then control + x to exit.
+
+7. now try to run the command
+
+    proxychains firefox 
+
+8. once the firefox is opened , check for ip address or dns leaks by entering in the google search bar- it will show different country with different ip address.
+
+9. if you get an error runnig the command "proxychains firefox"
+then exit the root and then try running it again . it will work perfectly.
+
+Thank you
+
+
+    
